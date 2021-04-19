@@ -94,6 +94,7 @@ def get_name_and_count_product(url):
         if html == 0:
             logger.error('Not connection name and count')
             pass
+
         else:
             soup = bs(html, 'lxml')
             with open('arduinopro.txt', 'a') as filename:

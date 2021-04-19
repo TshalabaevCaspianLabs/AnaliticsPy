@@ -91,9 +91,10 @@ def get_last_count_product(file_name):
         count.append(catcount)
     return count
 
+
 def get_phinish_count(file_name):
     counts_list = get_last_count_product(file_name)
-
+    print(counts_list[0])
     data_list_count = []
 
     for counts in counts_list:
@@ -104,12 +105,13 @@ def get_phinish_count(file_name):
             data_list_count.append(count_phinish)
         except Exception as e:
             try:
-                counts_phinish_ =  float(two) - float(one)
+                counts_phinish_ = float(two) - float(one)
                 data_list_count.append(counts_phinish_)
             except:
                 data_list_count.append(one)
 
     return data_list_count
+
 
 def read_last_exele_file(name_file):
     counts = get_phinish_count(name_file)
@@ -130,7 +132,6 @@ def read_last_exele_file(name_file):
         print(e)
 
     wb.save(f'{name_file}.xls')
-
 
 
 
